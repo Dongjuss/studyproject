@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="memberDao"> <!--namespace필수 : 인터페이스 이름 직접 명시  -->
+  	<select id="idCheck" parameterType="String" resultType="int">  <!--id의 타입 : String  -->		
+  			select count(id) cnt
+			from member
+			where id = #{id} <!-- Mybatis 는 파라미터 두개 못넘겨주고 map이나 dto로 넘겨준다.  -->
+  	</select>
+  	<!-- properties : get , set을 제외한 변수 이름  -->
+ 	
+  	<select id="zipSearch" parameterType="String" resultType="zipDto"> <!-- 결과같은 어디에 담을꺼냐 리스트에 담는건 selectList 메소드가 한다 -->
+  			<!-- 결과값 set을 알아서 해준다. zipcode에 대한 set와 address에대한 set이 있어야 한다(해당properties 가 있어야함). -->
+  			select zipcode, sido || ' ' || gugun || ' ' || doro as address 
+			from zipcode 
+			where doro like '%'||#{dong}||'%'
+  	</select>
+  	<insert id="registerMember" parameterType="memberDetailDto">
+  			insert all 
+			into member (name, id, pass, email1, email2, joindate) 
+			values (#{name}, #{id}, #{pass}, #{email1}, #{email2}, sysdate)
+			into member_detail (id, zipcode, addr1, addr2, tel1, tel2, tel3)
+			values (#{id}, #{zipcode}, #{addr1}, #{addr2}, #{tel1}, #{tel2}, #{tel3})
+			select * from dual
+  	</insert>
+
+  	
+  	<select id="login" parameterType="map" resultType="memberDto">
+		select id, name, email1, email2
+		from member
+		where id = #{userid} and pass = #{userpass}  	
+  	</select> 
+  </mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+  <configuration>
+  <properties resource="com/kitri/mapper/dbinfo.properties"></properties>
+  	<typeAliases>
+  		<typeAlias type="java.util.Map" alias="map"/>
+  		<typeAlias type="com.kitri.member.model.ZipDto" alias="zipDto"/>
+  		<typeAlias type="com.kitri.member.model.MemberDto" alias="memberDto"/>
+  		<typeAlias type="com.kitri.member.model.MemberDetailDto" alias="memberDetailDto"/>	
+  	</typeAliases>
+  		<environments default="development">
+  			<environment id="development">
+  				<transactionManager type="JDBC"></transactionManager>
+  				<dataSource type="POOLED">
+  					<property name="driver" value="${driver}"/>			
+					<property name="url" value="${url}"/>			
+					<property name="username" value="${dbid}"/>
+					<property name="password" value="${dbpwd}"/>
+  				</dataSource> <!--DB 읽어드려라  -->
+  			</environment>
+  		</environments>
+  		
+  		<mappers>
+  			<mapper resource="com/kitri/mapper/admin.xml"/> 
+  			<mapper resource="com/kitri/mapper/member.xml"/> <!-- xml읽어드려라.  -->
+  		</mappers> <!--resource:프로젝트안 url:인터넷안 클래스라 "/" 해준다.-->
+  </configuration>
