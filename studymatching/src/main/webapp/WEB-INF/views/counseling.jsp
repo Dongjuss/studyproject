@@ -45,15 +45,15 @@
                 </form>
 						 <table class="table table-striped">
 							<tr>
-								<td>분류</td>
-								<td>제목</td>
-								<td>등록날짜</td>	
+								<th>분류</th>
+								<th style="text-align: center;">제목</th>
+								<th style="text-align: center;">등록날짜</th>	
 							</tr>
 							
 							<tr>
 								<td>이용방법</td>
 								<td><a href="${root}/pagemove/mycounselingview.project">파워링크 등록은 어떻게 하나요??</a></td>							
-								<td>2018-07-24</td>
+								<td style="text-align: center;"> 2018-07-24</td>
 	
 							</tr>		
 									

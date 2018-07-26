@@ -45,12 +45,12 @@
                 </form>
 						 <table class="table table-striped">
 							<tr>
-								<td>주제</td>
-								<td>제목</td>
-								<td>위치</td>
-								<td>등록날짜</td>
-								<td>조회수</td>
-								<td>추천수</td>		
+								<th style="text-align: center;">주제</th>
+								<th style="text-align: center;">제목</th>
+								<th style="text-align: center;">위치</th>
+								<th style="text-align: center;">등록날짜</th>
+								<th style="text-align: center;">조회수</th>
+								<th style="text-align: center;">추천수</th>		
 							</tr>
 							
 							<tr>

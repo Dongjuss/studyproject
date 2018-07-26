@@ -54,10 +54,11 @@
 					</div>
 					 <table class="table table-striped">
 							<tr>
-								<td>주제</td>
-								<td>제목</td>
-								<td>기간</td>
-								<td>인원</td>							
+								<th style="text-align: center;">주제</th>
+								<th style="text-align: center;">제목</th>
+								<th style="text-align: center;">기간</th>
+								<th style="text-align: center;">인원</th>	
+								<th style="text-align: center;" colspan="2">비고</th>						
 							</tr>							
 							<tr>
 								<td>기사자격증</td>
@@ -65,7 +66,8 @@
 								<td>2018-07-24~08-24</td>
 								<td>2/4</td>
 								<td><input type="text" value="진행중" style="width: 40px;"></td>
-								<td><input type="button" class="btn" value="생성취소" style="width: 80px;"></td>	
+								
+								<td><input type="button" class="btn" value="파워링크신청" style="width: 100px;"></td>	
 							</tr>			
 
 																												

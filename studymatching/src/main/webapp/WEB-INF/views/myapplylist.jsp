@@ -54,11 +54,11 @@
 					</div>
 					 <table class="table table-striped">
 							<tr>
-								<td>주제</td>
-								<td>제목</td>
-								<td>기간</td>
-								<td>상태</td>
-								<td>취소</td>
+								<th style="text-align: center;">주제</th>
+								<th style="text-align: center;">제목</th>
+								<th style="text-align: center;">기간</th>
+								<th style="text-align: center;">상태</th>
+								<th style="text-align: center;">취소</th>
 							</tr>							
 							<tr>
 								<td>기사자격증</td>
